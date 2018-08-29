@@ -9,27 +9,51 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style type = "text/css">
       .placeholder {
-        background-color: rgb(200, 200, 255)
-        border: 2px solid rgb(50, 50, 100)
+        background-color: rgb(200, 200, 255);
+        border: 2px solid rgb(50, 50, 100);
       }
+
+      #target-date {
+        border: 1px solid rgb(94,3,5);
+      }
+
+      .data-big, .label {
+        font-size: 20pt;
+      }
+
+      section h2 {
+        color: #999;
+        font-size: 12pt;
+        Text-transform: uppercase;
+      }
+
     </style>
     <title>My HTML Page</title>
-</head>
-<body>
+  </head>
+
+  <body>
 
   <div class="container-fluid">
-    <h1>Project Title</h1>
-    <div class ="row">
-      <div class = "col placeholder">
+    <h1>Project Name</h1>
+    <div class="row">
+      <div class="col">
         This is where content goes.
       </div>
-      <div class = "col placeholder">
-        This is where content goes.
+      <section id="target-date" class="col placeholder">
+        <h2>Target Date</h2>
+        <div>
+
+          <span class="label">Days:</span>
+          <Span class = "data-big time-med">17</Span>
+        </div>
+        <span>10/30/1995</span>
+
       </div>
-      <div class = "col placeholder">
+      <div class="col">
         This is where content goes.
       </div>
     </div>
   </div>
+
 </body>
 </html>
