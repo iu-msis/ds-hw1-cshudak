@@ -20,6 +20,11 @@ section .ban {
   font-weight: bold;
 }
 
+#taskTable > tbody  {
+  border-left: 12px solid green;
+  cursor: pointer;
+}
+
 
 th[role=columnheader]:not(.no-sort) {
 

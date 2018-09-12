@@ -1,7 +1,7 @@
 var dashboardApp = new Vue({
   el: '#dashboard',
   data: {
-    name : "Tapestry",
+    name : "Project Dashboard",
     "short_description": "Build a visualization layer for the project dashboard",
     "start_date" : "2018-07-01",
     "target_date" : "2018-11-03",
@@ -49,6 +49,9 @@ var dashboardApp = new Vue({
           console.log(err);
 
           })
+        },
+        gotoTask(tid) {
+          window.location = 'task.html?taskId=' + tid;
         }
       },
       created: function() {
