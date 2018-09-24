@@ -10,15 +10,12 @@ var userApp = new Vue({
         fetch('https://randomuser.me/api/')
         .then(response => response.json() )
         // this is the same as .then(function(response) {return response.json()} )
-        .then( json => {this.userData = json.results[0]})
+        .then( json => {userApp.userData = json.results[0]})
         .catch(err => {
           console.log(err);
 
           })
         }
-
-
-
     },
 
     computed: {
@@ -30,8 +27,7 @@ var userApp = new Vue({
       }
 
     },
-      created: function() {
+      created() {
         this.fetchUser();
-        console.log(this.userData);
-  }
+      }
 })
