@@ -7,8 +7,8 @@ Class Comment {
 
 
   Public function __construct($data) {
-    $this->$id = intval($data['id'])
-    $this->comment = $data[comment];
+    this->$id = intval($data['id'])
+    this->comment = $data[comment];
   }
 
   public function create() {
