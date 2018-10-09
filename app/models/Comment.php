@@ -20,14 +20,14 @@ Class Comment {
       $this->comment
     ]);
 
-    $this->id = $db->lastInsertID();
+    $this->id = $db->lastInsertId();
   }
 
-  public static function fetchall() {
+  public static function fetchAll() {
 
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    $sql = 'SELECT * FROM Homework';
-    $statement = $db->prepare($sql);
+    $sql = 'SELECT * FROM Homework;';
+    $statement = $db->prepare ($sql);
     $success = $statement->execute();
 
 
