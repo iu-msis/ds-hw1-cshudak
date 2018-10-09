@@ -12,7 +12,7 @@ class Comment {
   }
 
   public function create() {
-    $db = new PDO(DB_SERVER, DB_USER, DB_PASSWORD);
+    $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql = 'INSERT INTO Homework (comment)
       VALUES (?)';
     $statement = $db->prepare($sql);
@@ -35,7 +35,7 @@ class Comment {
 
     $arr = [];
     while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-      
+
       $newComment = new Comment($row);
       array_push($arr, $newComment);
 
