@@ -7,14 +7,14 @@ class Comment {
 
 
   public function __construct($data) {
-    $this->$id = isset($data['id']) ? $data['id'] : null;
+    $this->id = isset($data['id']) ? $data['id'] : null;
     $this->comment = $data['comment'];
   }
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PASSWORD);
     $sql = 'INSERT INTO Homework (comment)
-      VALUES(?)';
+      VALUES (?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
       $this->comment
