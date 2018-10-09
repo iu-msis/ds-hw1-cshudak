@@ -7,7 +7,7 @@ Class Comment {
 
 
   Public function __construct($data) {
-    $this->$id = isset($data['id']) ? $row['id'] : null;
+    $this->$id = isset($data['id']) ? $data['id'] : null;
     $this->comment = $data[comment];
   }
 
