@@ -8,7 +8,7 @@ Class Comment {
 
   public function __construct($data) {
     $this->$id = isset($data['id']) ? $data['id'] : null;
-    $this->comment = $data['comment'];
+    $this->comment = $data['comment'  ];
   }
 
   public function create() {
@@ -17,9 +17,7 @@ Class Comment {
       VALUES(?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
-      $this->id,
       $this->comment
-
     ]);
 
     $this->id = $db->lastInsertID();

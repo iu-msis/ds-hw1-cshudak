@@ -12,4 +12,4 @@ $commentArr = Comment::fetchAll();
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
 header('Content-Type; application/json');
-echo json;
+echo $json;
