@@ -29,6 +29,7 @@ Class Comment {
 
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql = 'SELECT * FROM Homework';
+    $statement = $db->prepare($sql)
     $success = $statement->execute();
 
 
