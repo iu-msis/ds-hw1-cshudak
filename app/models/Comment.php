@@ -13,8 +13,8 @@ Class Comment {
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PASSWORD);
-    $sql = 'INSERT Homework (id, comment)
-      VALUES(? ?)';
+    $sql = 'INSERT INTO Homework (comment)
+      VALUES(?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
       $this->id,
