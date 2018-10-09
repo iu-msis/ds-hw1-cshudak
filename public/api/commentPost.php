@@ -2,6 +2,6 @@
 
 $comment = new Comment($_POST);
 
-$ccomment->create();
+$comment->create();
 
 echo json_encode($comment);
