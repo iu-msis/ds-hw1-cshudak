@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $commentArr = Comment::fetchAll();
-Var_dump($commentArr);
+// Var_dump($commentArr);
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
 header('Content-Type; application/json');
