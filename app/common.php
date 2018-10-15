@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 chdir(__DIR__);
 
