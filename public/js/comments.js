@@ -23,7 +23,7 @@ fetch('api/comment.php', {
   console.log(response);
   return response.json();
 })
-.then( json => {this.comment.push(json)})
+.then( json => {this.comments.push(json)})
 .catch( err => {
   console.error('COMMENT POST ERROR');
   console.error(err);
