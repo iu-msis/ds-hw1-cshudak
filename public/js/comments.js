@@ -42,7 +42,7 @@ fetchEmptyCommentForm() {
 
 created() {
 
-  fetch('.../api/comment.php')
+  fetch('../api/comment.php')
   .then( response => response.json() )
   .then( json => {commentApp.comment = json} )
   .catch( err => {
