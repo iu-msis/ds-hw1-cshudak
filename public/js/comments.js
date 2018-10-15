@@ -34,7 +34,7 @@ fetch('api/comment.php', {
 
 fetchEmptyCommentForm() {
   return{
-    comments:null
+    comment:null
   }
 },
 },
