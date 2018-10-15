@@ -44,10 +44,10 @@ created() {
 
   fetch('../api/comment.php')
   .then( response => response.json() )
-  .then( json => {commentApp.comment = json} )
+  .then( json => {commentsApp.comment = json} )
   .catch( err => {
     console.log('COMMENT FETCH ERROR');
-
+    console.log(err);
   })
 }
 })
