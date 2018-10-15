@@ -1,7 +1,7 @@
 CREATE TABLE Homework (
-  id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-  comment VARCHAR(80) NOT NULL
-
+  id INT AUTO_INCREMENT,
+  comment VARCHAR(80) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 INSERT INTO Homework (id, comment)
@@ -10,3 +10,6 @@ INSERT INTO Homework (id, comment)
 VALUES (2, 'after you');
 INSERT INTO Homework (id, comment)
 VALUES (3, 'complete the core');
+
+INSERT INTO Homework (comment)
+VALUES ('life is awesome');
