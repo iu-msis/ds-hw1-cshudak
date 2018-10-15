@@ -11,5 +11,5 @@ $commentArr = Comment::fetchAll();
 // Var_dump($commentArr);
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
-header('Content-Type; application/json');
+header('Content-Type: application/json');
 echo $json;
