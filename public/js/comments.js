@@ -1,7 +1,7 @@
 var commentsApp = new Vue ({
 el: '#commentMain',
 data: {
-  comment: [],
+  comments: [],
   commentForm: {}
 },
 
@@ -44,7 +44,7 @@ created() {
 
   fetch('../api/comment.php')
   .then( response => response.json() )
-  .then( json => {commentsApp.comment = json; console.log(json);} )
+  .then( json => {commentsApp.comments = json;} )
   .catch( err => {
     console.log('COMMENT FETCH ERROR');
     console.log(err);
