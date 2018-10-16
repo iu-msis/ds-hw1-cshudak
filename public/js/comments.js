@@ -1,14 +1,9 @@
-var commentsApp = new Vue ({
-
-el: '#commentMain',
-
-data: {
-
-  comments: [],
-
-  commentForm: {}
-
-  },
+var commentsApp = new Vue({
+	el: '#commentMain',
+	data: {
+		comment: [],
+		commentForm: {}
+	},
 
 
 
