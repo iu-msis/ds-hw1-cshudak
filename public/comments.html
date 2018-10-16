@@ -24,66 +24,39 @@
     <title>User Info</title>
 
   </head>
-
   <body>
+      <div id="commentMain">
+         <div class="topnav">
+            <li> <a href="index.html">Home</a> </li>
+            <li> <a href="UserInfo.html">UserInfo</a> </li>
+            <li> <a href="Table.html">Table</a></li>
+            <li> <a href="comments.html">Comments</a></li>
+         </div>
+         <h1>Comments</h1>
+         <table id="commentTable" class="table">
+            <thead>
+               <tr>
+                  <th> ID  </th>
+                  <th> Comment  </th>
+               </tr>
+            </thead>
+            <tr v-for="c in comment">
+               <td>{{  c.id  }}  </td>
+               <td>{{  c.comment  }}  </td>
+            </tr>
+         </table>
+         <form id="newCommentForm" @submit.prevent = "handleCommentPost">
+            <div class = "form-group row" style="margin-left: 50px;">
+               <div>
+                  <input type= "text" id= "comment" v-model= "commentForm.comment" class= "form-control" required />
+               </div>
+               <button type="submit" id="submitNewComment" class="btn btn-primary"> Add Comment</button>
+            </div>
+         </form>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="js/comments.app.js"></script>
+   </body>
 
-
-      <div id = "commentMain">
-          <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="UserInfo.htmml">User Information</a>
-            <a href="table.html">Table</a>
-            <a href="comments.html">Comments</a>
-          </div>
-
-
-      <h1>Comments</h1>
-
-    <div>
-    <table id="commentTable" class="table">
-        <thead>
-          <tr>
-            <th>
-              ID
-            </th>
-            <th>
-              Comment
-            </th>
-          </tr>
-        </thead>
-        <tr v-for="c in comments">
-            <td>
-              {{c.id}}
-            </td>
-            <td>
-              {{c.comment}}
-            </td>
-        </tr>
-
-      </table>
-
-    </div>
-    <div>
-      <form id="newCommentForm" @submit.prevent = "handleNewComment">
-        <div class ="form-group row">
-          <div>
-            <input type = "text" id = "comment" v-model = "CommentForm.comment" class="form-control" required />
-
-          </div>
-          <button type ="submit" id ="submitNewComment" class = "btn btn-primary">Submit Comment</button>
-        </div>
-      </form>
-    </div>
-
-</div>
-    <!-- development version, includes helpful console warnings -->
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-    <script src="js/comments.js"></script>
-
-
-
-  </body>
 
 </html>
