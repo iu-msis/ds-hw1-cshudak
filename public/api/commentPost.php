@@ -1,4 +1,4 @@
-<<?php
+<?php
 
 $comment = new Comment($_POST);
 
