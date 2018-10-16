@@ -69,7 +69,7 @@ methods: {
 
   fetchEmptyCommentForm() {
 
-  return{
+  return {
 
     comment:null
 
