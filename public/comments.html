@@ -40,10 +40,12 @@
                   <th> Comment  </th>
                </tr>
             </thead>
-            <tr v-for="c in comment">
-               <td>{{  c.id  }}  </td>
-               <td>{{  c.comment  }}  </td>
-            </tr>
+            <tbody id="commentTableBody">
+              <tr v-for="c in comment">
+                 <td>{{  c.id  }}  </td>
+                 <td>{{  c.comment  }}  </td>
+              </tr>
+            </tbody>
          </table>
          <form id="newCommentForm" @submit.prevent = "handleCommentPost">
             <div class = "form-group row" style="margin-left: 50px;">
