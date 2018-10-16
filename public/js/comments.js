@@ -5,8 +5,6 @@ var commentsApp = new Vue({
 		commentForm: {}
 	},
 
-
-
   methods: {
   		handleCommentPost(e) {
   			e.preventDefault();
@@ -44,28 +42,15 @@ var commentsApp = new Vue({
   		},
   	},
 
-
-
-
-
-created() {
-
-
-
-  fetch('/api/comment.php')
-
-  .then( response => response.json() )
-
-  .then( json => {commentsApp.comments = json;} )
-
-  .catch( err => {
-
-    console.log('COMMENT FETCH ERROR');
-
-    console.log(err);
-
-  })
-
-}
-
-})
+    created() {
+    		fetch('api/comment.php')
+    			.then(response => response.json())
+    			.then(json => {
+    				commentsApp.comment = json
+    			})
+    			.catch(err => {
+    				console.log('COMMENT FETCH ERROR:');
+    				console.log(err);
+    			})
+    	}
+    })
